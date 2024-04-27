@@ -41,6 +41,7 @@
     #text(
       font: fonts.HeiTi,
       size: fonts.No2,
+      weight: "bold"
     )[
       #title
     ]
