@@ -144,29 +144,21 @@
       size: fonts.No4-Small,
   )
 
-  body
-  
-  // Display bibliography.
-  if bibliography != none {
     show std-bibliography: it => {
-      pagebreak()
-      show heading: title => {
-        align(center)[
-          #strong()[
-            #text(
-              font: fonts.HeiTi,
-              size: fonts.No3,
-          )[#title]
-          ]
-        ]
-      }
-      v(1em)
+    show heading: title => {
       set text(
-        font: fonts.SongTi,
-        size: fonts.No5,
+        font: fonts.HeiTi,
+        size: fonts.No3,
       )
-      it
+      title
     }
-    bibliography
+
+    set text(
+      size: fonts.No5,
+      font: fonts.SongTi,
+    )
+    it
   }
+
+  body
 }

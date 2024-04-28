@@ -54,6 +54,14 @@
 #lorem(20).
 === 我的 test 1.3
 
+#pagebreak()
+#bibliography(
+  "refer.bib",
+  title: "参考文献",
+  style: "gb-7714-2005-numeric"
+)
+
+
 // 附录
 #pagebreak()
 #set heading(numbering: none)
