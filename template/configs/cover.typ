@@ -210,7 +210,7 @@
         #text(
           font: fonts.SongTi,
           size: fonts.Initial-Small,
-          weight: 550,
+          weight: "bold"
         )[
           #if(isCN){
             [本科生毕业设计（论文）]
