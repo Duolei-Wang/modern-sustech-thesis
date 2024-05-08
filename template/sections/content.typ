@@ -5,72 +5,123 @@
 // 离线测试使用
 // #import "@local/modern-sustech-thesis:0.1.1": sustech-thesis
 
+// template-curryst
+#import "@preview/curryst:0.3.0": rule, proof-tree
+#import "@preview/ctheorems:1.1.2": *
+#set text(
+  font: "sims"
+)
+
+#show: thmrules.with(
+  qed-symbol: $square$
+)
+
+// template-theorem
+#let indent = h(2em)
+
+#let define = thmbox(
+  "def",
+  "定义"
+)
+
+#let theorem = thmbox(
+  "def",
+  "定理",
+)
+
+#let prop = thmbox(
+  "def",
+  "性质",
+)
+
+#let notation = thmbox(
+  "def",
+  "符号",
+)
+
+#let example = thmbox(
+  "def",
+  "例子",
+)
+
+#let remark = thmbox(
+  "def",
+  "评注",
+)
+
+#let proof = thmproof(
+  "proof",
+  text[证明],
+)
+
+#set math.cases(
+  gap: 1em,
+)
+
+// template-sustech-thesis
 #let indent = h(2em)
 #show: sustech-thesis.with(
-  isCN: true,
+  isCN: false,
   information: (
     title: (
-      [第一行],
-      [第二行],
+      [Title line 1],
+      [Title line 2],
+      [],
     ),
-    subtitle: [副标题],
-    
+    subtitle: [Substitle],
     abstract-body: (
         [#lorem(40)],
-        [#lorem(49)]
+        [#lorem(40)]
     ),
+
     keywords: (
-      [Keyword1],
-      [关键词2],
-      [啦啦啦],
-      [你好]
+      [Keyword 1],
+      [Keyword 2],
+      [Keyword 3],
+      [Keyword 4],
     ),
-    author: [慕青QAQ],
-    department: [数学系],
-    major: [数学],
-    advisor: [木木],
+    author: [MuTsing QAQ],
+    department: [Math],
+    major: [Mathematics and Applied Mathematics],
+    advisor: [Academic#h(1em)Advisor],
+  ),
+  
+  information-EN: (
+    title: (
+      [#lorem(10)],
+      [#lorem(10)],
+    ),
+    subtitle: [#lorem(4)],
+    abstract-body: (
+        [#lorem(40)],
+        [#lorem(40)]
+    ),
+
+    keywords: (
+      [#lorem(10)],
+      [#lorem(10)],
+    ),
+    author: [慕青],
+    department: [Math],
+    major: [Math],
+    advisor: [Advisor],
   ),
   toc-title: [目录],
-  bibliography: bibliography(
-    "refer.bib",
-    title: [参考文献],
-    style: "gb-7714-2015-numeric",
-  ),
 )
 
-== 我的 test 1.1
-#indent
-#lorem(49)
+= h1
 
-#lorem(40)
+== h1.1
 
+= h2
 
-= Ch2. 测试
+== h2.1
 
-== 我的 test 1.2
-#indent
-#lorem(20).@wang2010guide
-
-#lorem(20).
-=== 我的 test 1.3
+#lorem(299)@wang2010guide
 
 #pagebreak()
+
 #bibliography(
   "refer.bib",
-  title: "参考文献",
-  style: "gb-7714-2005-numeric"
+  
 )
-
-
-// 附录
-#pagebreak()
-#set heading(numbering: none)
-= Appendix
-
-== Appendix A. 一段代码
-
-#lorem(100)
-
-#pagebreak()
-== Appendix B. 我的评注
-谢谢

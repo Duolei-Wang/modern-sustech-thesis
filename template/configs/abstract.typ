@@ -9,12 +9,14 @@
       [第三行],
     ),
     subtitle: [副标题],
+
     keywords: (
       [Keyword1],
       [关键词2],
       [啦啦啦],
       [你好]
     ),
+
     author: [慕青QAQ],
     department: [数学系],
     major: [数学],
@@ -39,7 +41,10 @@
         [#information.title.sum()]
       }else{
         set text(weight: "bold")
-        [#information.title.sum()]
+        for t in information.title{
+          t
+          linebreak()
+        }
       }
       
     ]
@@ -50,10 +55,10 @@
       size: fonts.No2-Small,
     )[
       #if(isCN){
-        [——#information.subtitle]
+        [#information.subtitle]
       }else{
         set text(weight: "bold")
-        [——#information.subtitle]
+        [#information.subtitle]
       }
       
     ]
@@ -77,6 +82,8 @@
         [
       （#information.department 指导教师：#information.advisor）
       ]
+      }else{
+        []
       }
     ]
   ]
@@ -86,6 +93,7 @@
   #set par(
     first-line-indent: 0em,
     leading: 25pt,
+    justify: true,
   )
   #set text(
       font: fonts.SongTi,
@@ -105,7 +113,7 @@
         #indent#body.at(1)
       ]
 
-      v(4em)
+      v(1em)
 
       par()[
         #text(
@@ -134,7 +142,7 @@
       par()[
         #indent#body.at(1)
       ]
-      v(4em)
+      v(1em)
       par()[
         #text(
           font: fonts.HeiTi,

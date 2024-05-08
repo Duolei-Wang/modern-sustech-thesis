@@ -113,7 +113,7 @@
   ),
   subtitle: [subtitle],
   author: [author],
-  SID: [SID],
+  SID: [12012727],
   department: [department],
   major: [major],
   advisor: [advisor],
@@ -194,12 +194,13 @@
 
     fillwith(
       3,
-      1,
+      3,
       topline,
       baseline,
     )[
       #text()[]
     ],
+
 
     fillwith(
       columns, 
@@ -210,7 +211,7 @@
         #text(
           font: fonts.SongTi,
           size: fonts.Initial-Small,
-          weight: "bold"
+          weight: "bold",
         )[
           #if(isCN){
             [本科生毕业设计（论文）]
@@ -350,7 +351,7 @@
 
     fillwith(
       3,
-      7,
+      5,
       topline,
       baseline,
     )[],
@@ -377,7 +378,6 @@
       ]
     ]
   )
-  pagebreak()
 }
 
 #cover()

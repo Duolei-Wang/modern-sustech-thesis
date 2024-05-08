@@ -41,7 +41,9 @@
       size: fonts.No4,
     )
     if(it.level == 1){
-      set text(weight: "bold")
+      set text(
+        weight: 700,
+      )
       it
     }else{
       it
